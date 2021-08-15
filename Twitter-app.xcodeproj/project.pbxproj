@@ -27,6 +27,8 @@
 		3B1952D726C8B9070080563D /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1952D626C8B9070080563D /* CustomTextView.swift */; };
 		3B1952D926C8B93F0080563D /* PasswordCustomTextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1952D826C8B93F0080563D /* PasswordCustomTextArea.swift */; };
 		3B1952DB26C8C0730080563D /* Sign-upView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1952DA26C8C0730080563D /* Sign-upView.swift */; };
+		3B1952DD26C990710080563D /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1952DC26C990710080563D /* ImagePickerView.swift */; };
+		3B1952DF26C994F70080563D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B1952DE26C994F70080563D /* GoogleService-Info.plist */; };
 		3B1F27B426C3790800679BCB /* Twitter_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F27B326C3790800679BCB /* Twitter_appApp.swift */; };
 		3B1F27B626C3790800679BCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F27B526C3790800679BCB /* ContentView.swift */; };
 		3B1F27B826C3790900679BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F27B726C3790900679BCB /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		3B1952D626C8B9070080563D /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		3B1952D826C8B93F0080563D /* PasswordCustomTextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCustomTextArea.swift; sourceTree = "<group>"; };
 		3B1952DA26C8C0730080563D /* Sign-upView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sign-upView.swift"; sourceTree = "<group>"; };
+		3B1952DC26C990710080563D /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		3B1952DE26C994F70080563D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B1F27B026C3790800679BCB /* Twitter-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1F27B326C3790800679BCB /* Twitter_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter_appApp.swift; sourceTree = "<group>"; };
 		3B1F27B526C3790800679BCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 				3B1952CF26C8AEEB0080563D /* customTextArea.swift */,
 				3B1952D626C8B9070080563D /* CustomTextView.swift */,
 				3B1952D826C8B93F0080563D /* PasswordCustomTextArea.swift */,
+				3B1952DC26C990710080563D /* ImagePickerView.swift */,
 			);
 			path = UtilsView;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		3B1F27B226C3790800679BCB /* Twitter-app */ = {
 			isa = PBXGroup;
 			children = (
+				3B1952DE26C994F70080563D /* GoogleService-Info.plist */,
 				3B1F27C426C3861900679BCB /* ViewModels */,
 				3B1F27C326C3860A00679BCB /* Views */,
 				3B1F27C226C3860200679BCB /* Models */,
@@ -285,6 +291,7 @@
 			files = (
 				3B1F27BB26C3790900679BCB /* Preview Assets.xcassets in Resources */,
 				3B1F27B826C3790900679BCB /* Assets.xcassets in Resources */,
+				3B1952DF26C994F70080563D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +324,7 @@
 				3B19529C26C460C70080563D /* SearchBar.swift in Sources */,
 				3B1952C526C8072D0080563D /* UserProfile.swift in Sources */,
 				3B19529E26C463BA0080563D /* ContactsCell.swift in Sources */,
+				3B1952DD26C990710080563D /* ImagePickerView.swift in Sources */,
 				3B1952D726C8B9070080563D /* CustomTextView.swift in Sources */,
 				3B1952B226C4B1C90080563D /* MessageSearchView.swift in Sources */,
 				3B1952A226C46C450080563D /* MessageCell.swift in Sources */,

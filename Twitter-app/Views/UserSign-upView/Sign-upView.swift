@@ -48,6 +48,8 @@ struct Sign_upView: View {
                         }
                         
                     }
+                }).sheet(isPresented: $showImagePicker, onDismiss: loadImage, content: {
+                    ImagePicker(image: $selectedUIImage)
                 })
                 
                 VStack(spacing: 20) {
@@ -88,38 +90,25 @@ struct Sign_upView: View {
                 })
                 
                 Spacer()
-
+                
                 Button(action: { mode.wrappedValue.dismiss() }, label: {
                     HStack {
                         Text("Already have an account?")
                             .font(.system(size: 14))
-
+                        
                         Text("Sign In")
                             .font(.system(size: 14, weight: .semibold))
                     }
                     .foregroundColor(.white)
                     .padding(.bottom, 40)
                 })
-//                NavigationLink( //removed because of infinite loop
-//                    destination: Log_inView().navigationBarBackButtonHidden(true),
-//                    label: {
-//                        HStack {
-//                            Text("Already have an account?")
-//                                .font(.system(size: 14))
-//
-//                            Text("Sign In")
-//                                .font(.system(size: 14, weight: .semibold))
-//                        }
-//                        .foregroundColor(.white)
-//                        .padding(.bottom, 40)
-//                    })
                 
                 
             }
         }
         .background(Color(#colorLiteral(red: 0.1825715601, green: 0.6299551129, blue: 0.9542170167, alpha: 1)))
         .ignoresSafeArea()
-    }
+        }
 }
 
 struct Sign_upView_Previews: PreviewProvider {
