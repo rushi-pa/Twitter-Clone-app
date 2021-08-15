@@ -9,6 +9,7 @@ import SwiftUI
 
 struct newTweetView: View {
     @Binding var isPresented : Bool
+    @State var tweetInput : String = ""
   //  var tweet: Tweet?
     
     var body: some View {
@@ -52,7 +53,7 @@ struct newTweetView: View {
                     .frame(width: 64, height: 64)
                     .cornerRadius(32)
                 
-//                TextArea(viewModel.placeholderText, text: $captionText)
+                TextArea("What's happening", text: $tweetInput)
                 
                 Spacer()
             }.padding()
