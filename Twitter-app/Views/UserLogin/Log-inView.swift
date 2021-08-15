@@ -62,19 +62,19 @@ struct Log_inView: View {
                     
                     Spacer()
 //
-//                    NavigationLink(
-//                        destination: RegistrationView().navigationBarBackButtonHidden(true),
-//                        label: {
-//                            HStack {
-//                                Text("Don't have an account?")
-//                                    .font(.system(size: 14))
-//
-//                                Text("Sign Up")
-//                                    .font(.system(size: 14, weight: .semibold))
-//                            }
-//                            .foregroundColor(.white)
-//                            .padding(.bottom, 40)
-//                        })
+                    NavigationLink(
+                        destination: Sign_upView().navigationBarBackButtonHidden(true),
+                        label: {
+                            HStack {
+                                Text("Don't have an account?")
+                                    .font(.system(size: 14))
+
+                                Text("Sign Up")
+                                    .font(.system(size: 14, weight: .semibold))
+                            }
+                            .foregroundColor(.white)
+                            .padding(.bottom, 40)
+                        })
                 }
             }
             .background(Color(#colorLiteral(red: 0.1825715601, green: 0.6299551129, blue: 0.9542170167, alpha: 1)))

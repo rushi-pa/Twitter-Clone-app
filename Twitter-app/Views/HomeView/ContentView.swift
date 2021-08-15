@@ -10,28 +10,28 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView{
-            TabView{
-                FeedView(isnewTweetView: false)
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Home")
-                    }
-                SearchView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                    }
-                MessageView()
-                    .tabItem {
-                        Image(systemName: "envelope")
-                        Text("Messages")
-                    }
-            }
-            .navigationBarTitle("Home")
-            .navigationBarTitleDisplayMode(.inline);
-            
-            
-        }    }
+            Log_inView();
+//            TabView{
+//                FeedView(isnewTweetView: false)
+//                    .tabItem {
+//                        Image(systemName: "house")
+//                        Text("Home")
+//                    }
+//                SearchView()
+//                    .tabItem {
+//                        Image(systemName: "magnifyingglass")
+//                        Text("Search")
+//                    }
+//                MessageView()
+//                    .tabItem {
+//                        Image(systemName: "envelope")
+//                        Text("Messages")
+//                    }
+//            }
+//            .navigationBarTitle("Home")
+//            .navigationBarTitleDisplayMode(.inline);
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
