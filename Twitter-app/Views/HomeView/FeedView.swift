@@ -13,7 +13,7 @@ struct FeedView: View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView{
                 VStack{
-                    ForEach(0..<9) {_  in
+                    ForEach(0..<10) {_  in
                         Tweet_cell()
                     }
                 }
