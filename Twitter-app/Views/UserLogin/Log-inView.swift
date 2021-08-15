@@ -50,17 +50,15 @@ struct Log_inView: View {
                         })
                     }
                     
-//                    Button(action: {
-//                        viewModel.login(withEmail: email, password: password)
-//                    }, label: {
-//                        Text("Sign In")
-//                            .font(.headline)
-//                            .foregroundColor(.blue)
-//                            .frame(width: 360, height: 50)
-//                            .background(Color.white)
-//                            .clipShape(Capsule())
-//                            .padding()
-//                    })
+                    Button(action: {}, label: {
+                        Text("Sign In")
+                            .font(.headline)
+                            .foregroundColor(.blue)
+                            .frame(width: 360, height: 50)
+                            .background(Color.white)
+                            .clipShape(Capsule())
+                            .padding()
+                    })
                     
                     Spacer()
 //
