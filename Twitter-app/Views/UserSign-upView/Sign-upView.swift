@@ -16,7 +16,8 @@ struct Sign_upView: View {
     @State var selectedUIImage: UIImage?
     @State var image: Image?
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    
+    @EnvironmentObject var viewModel: UserModel
+
     func loadImage() {
         guard let selectedImage = selectedUIImage else { return }
         image = Image(uiImage: selectedImage)
@@ -79,7 +80,7 @@ struct Sign_upView: View {
                 }
                 .padding(.horizontal, 32)
                 
-                Button(action: {}, label: {
+                Button(action: { viewModel.Register(email: email, password: password, userName: username, fullName: fullname, userProfile: selectedUIImage ?? UIImage(imageLiteralResourceName: "batman"))}, label: {
                     Text("Sign Up")
                         .font(.headline)
                         .foregroundColor(.blue)
