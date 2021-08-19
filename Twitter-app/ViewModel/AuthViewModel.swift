@@ -1,13 +1,13 @@
 //
-//  UserAuthModel.swift
+//  AuthViewModel.swift
 //  Twitter-app
 //
-//  Created by Rushi Patel on 2021-08-15.
+//  Created by Rushi Patel on 2021-08-18.
 //
 
 import SwiftUI
 import Firebase
-class UserModel: ObservableObject {
+class AuthViewModel: ObservableObject {
     func login() {
     }
     func Register(email : String , password: String, userName: String, fullName: String, userProfile: UIImage){
@@ -19,5 +19,7 @@ class UserModel: ObservableObject {
             }
         }
     }
-    
+
 }
+
+

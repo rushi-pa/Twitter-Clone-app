@@ -16,7 +16,7 @@ struct Sign_upView: View {
     @State var selectedUIImage: UIImage?
     @State var image: Image?
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @EnvironmentObject var viewModel: UserModel
+    @ObservedObject var viewModel = AuthViewModel()
 
     func loadImage() {
         guard let selectedImage = selectedUIImage else { return }
@@ -25,9 +25,8 @@ struct Sign_upView: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            VStack(alignment: .center, spacing: 0) {
                 Button(action: { showImagePicker.toggle() }, label: {
-                    ZStack {
                         if let image = image {
                             image
                                 .resizable()
@@ -48,7 +47,6 @@ struct Sign_upView: View {
                                 .foregroundColor(.white)
                         }
                         
-                    }
                 }).sheet(isPresented: $showImagePicker, onDismiss: loadImage, content: {
                     ImagePicker(image: $selectedUIImage)
                 })
