@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FeedView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     @State var isnewTweetView : Bool
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -18,7 +19,10 @@ struct FeedView: View {
                     }
                 }
             }
-            Button(action: { isnewTweetView.toggle() }, label: {
+            Button(action: {
+                viewModel.SignOut()
+                    //isnewTweetView.toggle()
+            }, label: {
                 Image(systemName: "plus")
                     .resizable()
                     .frame(width: 26, height: 26)

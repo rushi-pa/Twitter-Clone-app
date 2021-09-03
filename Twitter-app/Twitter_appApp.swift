@@ -14,7 +14,8 @@ struct Twitter_appApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           // Log_inView()
+           ContentView().environmentObject(AuthViewModel())
         }
     }
 }

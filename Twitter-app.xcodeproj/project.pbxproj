@@ -37,7 +37,6 @@
 		3B1952EC26C996E50080563D /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3B1952EB26C996E50080563D /* FirebaseCrashlytics */; };
 		3B1952EE26C996E50080563D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B1952ED26C996E50080563D /* FirebaseAuth */; };
 		3B1952F026C996E50080563D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3B1952EF26C996E50080563D /* FirebaseMessaging */; };
-		3B1952F226C9B43C0080563D /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1952F126C9B43C0080563D /* UserAuthModel.swift */; };
 		3B1F27B426C3790800679BCB /* Twitter_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F27B326C3790800679BCB /* Twitter_appApp.swift */; };
 		3B1F27B626C3790800679BCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F27B526C3790800679BCB /* ContentView.swift */; };
 		3B1F27B826C3790900679BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1F27B726C3790900679BCB /* Assets.xcassets */; };
@@ -71,7 +70,6 @@
 		3B1952DA26C8C0730080563D /* Sign-upView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sign-upView.swift"; sourceTree = "<group>"; };
 		3B1952DC26C990710080563D /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		3B1952DE26C994F70080563D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3B1952F126C9B43C0080563D /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
 		3B1F27B026C3790800679BCB /* Twitter-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Twitter-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1F27B326C3790800679BCB /* Twitter_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter_appApp.swift; sourceTree = "<group>"; };
 		3B1F27B526C3790800679BCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				3B1952AD26C4868E0080563D /* MessageModel.swift */,
-				3B1952F126C9B43C0080563D /* UserAuthModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,7 +336,6 @@
 			files = (
 				3B1952C926C8079D0080563D /* FilterButtonView.swift in Sources */,
 				3B1952C726C8073F0080563D /* UserProfileHeader.swift in Sources */,
-				3B1952F226C9B43C0080563D /* UserAuthModel.swift in Sources */,
 				3B1F27CA26C44FF200679BCB /* SearchView.swift in Sources */,
 				3B1952D926C8B93F0080563D /* PasswordCustomTextArea.swift in Sources */,
 				3B1952CE26C8A2EA0080563D /* newTweetView.swift in Sources */,

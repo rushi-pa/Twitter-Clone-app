@@ -9,19 +9,23 @@ import SwiftUI
 import Firebase
 class AuthViewModel: ObservableObject {
     
-    @Published var sessions : Firebase.User?
+    @Published var userSession : Firebase.User?
     @Published var isAuthenticating = false;
     @Published var error : Error?
-    @Published var user : User?
+ //   @Published var user : User?
     
+    init() {
+        userSession = Auth.auth().currentUser
+    }
     
     func login(withEmail email : String, password : String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("\(error.localizedDescription)")
-            }else{
-                print("Sign up Sucessful")
             }
+            
+                print("sign in succesful")
+            self.userSession = result?.user
         }
     }
     func Register(email : String , password: String, userName: String, fullName: String, userProfile: UIImage){
@@ -50,17 +54,22 @@ class AuthViewModel: ObservableObject {
                         
                         let data = ["Email" : email,
                                      "FullName" : fullName,
-                                     "userName" : userName,
+                                     "userName" : userName.lowercased(),
                                      "imageURL" : profileImageUrl,
                                      "uuid" : user.uid];
-                        Firestore.firestore().collection("users").document(user.uid).setData(data) { error in
-                            print("An error occured while processing your request. Please try again! \(error?.localizedDescription)")
+                        Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
+                            self.userSession = user
+                            print("An error occured while processing your request. Please try again! \(String(describing: error?.localizedDescription))")
                         }
                 }
             }
         }
     }
-
+    func SignOut(){
+        
+        userSession = nil
+        try? Auth.auth().signOut()
+    }
 }
 
 
