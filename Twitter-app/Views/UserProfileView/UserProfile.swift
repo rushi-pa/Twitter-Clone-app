@@ -9,16 +9,19 @@ import SwiftUI
 
 struct UserProfile: View {
     @State var filterSelected : TweetFilterOptions = .tweets
+    let user : User
+    @ObservedObject var viewmodel : ProfileViewModel
+
+    init(user : User) {
+        self.user = user
+        self.viewmodel = ProfileViewModel(user: self.user)
+    }
     var body: some View {
        
-        UserProfileHeader();
+        UserProfileHeader(viewmodel: self.viewmodel, isFollowed: $viewmodel.isFollowed);
        // navigationTitle("Batman")
         FilterButtonView(selectedOption: $filterSelected).padding()
     }
 }
 
-struct UserProfile_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfile()
-    }
-}
+

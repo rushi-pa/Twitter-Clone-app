@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct UserProfileHeader: View {
+    let viewmodel : ProfileViewModel
+    @Binding var isFollowed : Bool
     var body: some View {
         VStack {
-            Image("batman")
+            KFImage(URL(string: viewmodel.user.profileImageUrl))
                 .resizable()
                 .scaledToFill()
                 .clipped()
@@ -18,11 +20,11 @@ struct UserProfileHeader: View {
                 .cornerRadius(120 / 2)
                 .shadow(color: .black, radius: 6, x: 0.0, y: 0.0)
             
-            Text("Batman")
+            Text(viewmodel.user.fullname)
                 .font(.system(size: 16, weight: .semibold))
                 .padding(.top, 8)
             
-            Text("@Eddie Brook")
+            Text("@\(viewmodel.user.username)")
                 .font(.subheadline)
                 .font(.system(size: 1))
                 .foregroundColor(.gray)
@@ -52,15 +54,15 @@ struct UserProfileHeader: View {
                 }
             }.padding(.horizontal).padding(.top,9).padding(.bottom,9)
             
-            ProfileFollowView(isCurrentUser: false, isFollowing: false);
+            ProfileFollowView(viewmodel: self.viewmodel, isFollowed: $isFollowed)
          //   ProfileActionButtonView(viewModel: viewModel, editProfilePresented: $editProfilePresented)
             Spacer()
         }
     }
 }
 
-struct UserProfileHeader_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileHeader()
-    }
-}
+//struct UserProfileHeader_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserProfileHeader()
+//    }
+//}

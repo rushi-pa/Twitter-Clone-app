@@ -20,8 +20,8 @@ struct FeedView: View {
                 }
             }
             Button(action: {
-                viewModel.SignOut()
-                    //isnewTweetView.toggle()
+                //viewModel.SignOut()
+                    isnewTweetView.toggle()
             }, label: {
                 Image(systemName: "plus")
                     .resizable()

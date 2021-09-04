@@ -12,15 +12,16 @@ struct MessageSearchView: View {
     @State var searchText = "";
     @Binding var show : Bool
     @Binding var StartnewChat : Bool
+    @ObservedObject var viewmodel = SearchViewModel()
     var body: some View {
         VStack{
         SearchBar(text: $searchText);
         ScrollView{
             VStack{
-                ForEach(0..<9) {_  in
+                ForEach(viewmodel.users) { user  in
                     Button(action: {self.show.toggle()
                             self.StartnewChat.toggle()}, label: {
-                        ContactsCell()
+                                ContactsCell(user: user)
                             }).foregroundColor(.black )
                 }
             }

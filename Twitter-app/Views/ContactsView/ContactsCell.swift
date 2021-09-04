@@ -6,24 +6,25 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct ContactsCell: View {
+    let user : User
     var body: some View {
         VStack {
             HStack{
-                Image("batman")
+                KFImage(URL(string: user.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 38, height: 38, alignment: .leading)
                     .cornerRadius(19)
                     
                 VStack(alignment: .leading) {
-                    Text("Contact Name")
+                    Text(user.username)
                         .font(.system(size: 19))
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .opacity(0.7)
                         
-                    Text("info")
+                    Text(user.fullname)
                         .foregroundColor(.gray)
                         .fontWeight(.semibold)
                     
@@ -38,8 +39,3 @@ struct ContactsCell: View {
     }
 }
 
-struct ContactsCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ContactsCell()
-    }
-}

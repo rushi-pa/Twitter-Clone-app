@@ -9,16 +9,17 @@ import SwiftUI
 
 struct SearchView: View {
     @State var searchText = "";
+    @ObservedObject var viewmodel = SearchViewModel()
     var body: some View {
         VStack{
             SearchBar(text: $searchText);
             ScrollView{
                 VStack{
-                    ForEach(0..<9) {_  in
+                    ForEach(viewmodel.users) { user  in
                         NavigationLink(
-                            destination: UserProfile(),
+                            destination: UserProfile( user: user),
                             label: {
-                                ContactsCell();
+                                ContactsCell(user: user);
                             }).foregroundColor(.black)
                     }
                 }
@@ -26,9 +27,4 @@ struct SearchView: View {
         }
     }
 
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView();
-        }
-    }
 }
