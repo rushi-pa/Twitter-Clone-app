@@ -51,6 +51,8 @@
 		3B9F40B226E2E68F00A525F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B126E2E68F00A525F9 /* Constants.swift */; };
 		3B9F40B426E2F1A900A525F9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B326E2F1A900A525F9 /* ProfileViewModel.swift */; };
 		3B9F40B626E3E76F00A525F9 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B526E3E76F00A525F9 /* UploadTweetViewModel.swift */; };
+		3B9F40B826E3F79800A525F9 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B726E3F79800A525F9 /* TweetModel.swift */; };
+		3B9F40BA26E3F7C900A525F9 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B926E3F7C900A525F9 /* TweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +93,8 @@
 		3B9F40B126E2E68F00A525F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B9F40B326E2F1A900A525F9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		3B9F40B526E3E76F00A525F9 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
+		3B9F40B726E3F79800A525F9 /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		3B9F40B926E3F7C900A525F9 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +242,7 @@
 			children = (
 				3B1952AD26C4868E0080563D /* MessageModel.swift */,
 				3B9F40A926E28A5600A525F9 /* User.swift */,
+				3B9F40B726E3F79800A525F9 /* TweetModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				3B9F40AE26E2E5BB00A525F9 /* SearchViewModel.swift */,
 				3B9F40B326E2F1A900A525F9 /* ProfileViewModel.swift */,
 				3B9F40B526E3E76F00A525F9 /* UploadTweetViewModel.swift */,
+				3B9F40B926E3F7C900A525F9 /* TweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -369,10 +375,12 @@
 				3B9F40B226E2E68F00A525F9 /* Constants.swift in Sources */,
 				3B1952CB26C807B40080563D /* ProfileFollowView.swift in Sources */,
 				3B1952A826C47AB70080563D /* MessageTextView.swift in Sources */,
+				3B9F40BA26E3F7C900A525F9 /* TweetViewModel.swift in Sources */,
 				3B1F27B626C3790800679BCB /* ContentView.swift in Sources */,
 				3B1F27C826C43B3500679BCB /* Tweet-cell.swift in Sources */,
 				3B1952B026C4A4800080563D /* MessageViewUtil.swift in Sources */,
 				3B1952AA26C47DAC0080563D /* ChatView.swift in Sources */,
+				3B9F40B826E3F79800A525F9 /* TweetModel.swift in Sources */,
 				3B9F40B426E2F1A900A525F9 /* ProfileViewModel.swift in Sources */,
 				3B1F27C626C3879200679BCB /* FeedView.swift in Sources */,
 				3B1952AE26C4868E0080563D /* MessageModel.swift in Sources */,

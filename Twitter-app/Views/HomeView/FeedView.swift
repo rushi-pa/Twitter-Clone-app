@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct FeedView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
     @State var isnewTweetView : Bool
+    @ObservedObject var tweetViewMode = TweetViewModel()
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView{
                 VStack{
-                    ForEach(0..<10) {_  in
-                        Tweet_cell()
+                    ForEach(tweetViewMode.tweets
+                    ) {tweet  in
+                        Tweet_cell(tweet: tweet)
                     }
                 }
             }
@@ -40,8 +41,3 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedView(isnewTweetView: false)
-    }
-}

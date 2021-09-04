@@ -16,7 +16,7 @@ class UploadTweetViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             guard let user = AuthViewModel.shared.user else { return };
             let docRef = COLLECTION_Tweet.document()
-            let data : [String : Any] = ["id" : docRef.documentID, "caption" : caption, "fullName" : user.fullname, "timeStamp" : Timestamp(date: Date()), "username" : user.username, "profileImage" : user.profileImageUrl, "Likes" : 0,  ]
+            let data : [String : Any] = ["id" : docRef.documentID, "caption" : caption, "fullName" : user.fullname, "timeStamp" : Timestamp(date: Date()), "username" : user.username, "profileImageUrl" : user.profileImageUrl, "Likes" : 0,  ]
             docRef.setData(data)
             self.isPresented = false
 
