@@ -9,9 +9,13 @@ import SwiftUI
 import Kingfisher
 struct newTweetView: View {
     @Binding var isPresented : Bool
+    @ObservedObject var viewmodel : UploadTweetViewModel
     @State var tweetInput : String = ""
   //  var tweet: Tweet?
-    
+    init(isPresented : Binding<Bool>) {
+        self._isPresented = isPresented
+        self.viewmodel = UploadTweetViewModel(isPresented: isPresented)
+    }
     var body: some View {
         VStack {
             HStack {
@@ -21,7 +25,7 @@ struct newTweetView: View {
                 })
                 Spacer()
                 
-                Button(action: {}, label: {
+                Button(action: {viewmodel.UploadTweet(caption: tweetInput)}, label: {
                     Text("Tweet")
                         .bold()
                         .padding(.horizontal)

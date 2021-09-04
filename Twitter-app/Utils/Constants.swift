@@ -8,3 +8,4 @@ import Firebase
 let COLLECTION_USERS = Firestore.firestore().collection("users")
 let COLLECTION_Followers = Firestore.firestore().collection("followers")
 let COLLECTION_Following = Firestore.firestore().collection("following")
+let COLLECTION_Tweet = Firestore.firestore().collection("tweets")
