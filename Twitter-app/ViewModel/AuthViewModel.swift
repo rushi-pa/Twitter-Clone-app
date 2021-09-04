@@ -13,7 +13,7 @@ class AuthViewModel: ObservableObject {
     @Published var isAuthenticating = false;
     @Published var error : Error?
     @Published var user : User?
-    
+    static let shared = AuthViewModel()
     init() {
         userSession = Auth.auth().currentUser
         fetchUser()
@@ -59,6 +59,7 @@ class AuthViewModel: ObservableObject {
                                      "uuid" : user.uid];
                         Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                             self.userSession = user
+                            self.fetchUser()
                             print("An error occured while processing your request. Please try again! \(String(describing: error?.localizedDescription))")
                         }
                 }

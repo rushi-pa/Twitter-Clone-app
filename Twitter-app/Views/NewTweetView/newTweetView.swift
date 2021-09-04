@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct newTweetView: View {
     @Binding var isPresented : Bool
     @State var tweetInput : String = ""
@@ -46,13 +46,14 @@ struct newTweetView: View {
 //            }
             
             HStack(alignment: .top) {
-                Image("batman")
+                if let user = AuthViewModel.shared.user{
+                    KFImage(URL(string: user.profileImageUrl )) //AuthViewModel.shared.user.))
                     .resizable()
                     .scaledToFill()
                     .clipped()
                     .frame(width: 64, height: 64)
                     .cornerRadius(32)
-                
+                }
                 TextArea("What's happening", text: $tweetInput)
                 
                 Spacer()
