@@ -24,9 +24,8 @@ class AuthViewModel: ObservableObject {
             if let error = error {
                 print("\(error.localizedDescription)")
             }
-            
-                print("sign in succesful")
             self.userSession = result?.user
+            self.fetchUser()
         }
     }
     func Register(email : String , password: String, userName: String, fullName: String, userProfile: UIImage){
