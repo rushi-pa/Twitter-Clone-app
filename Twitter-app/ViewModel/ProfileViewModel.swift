@@ -14,6 +14,7 @@ class ProfileViewModel: ObservableObject {
     init(user : User) {
         self.user = user
         checkIfUserIsFollowing()
+        fetchUsersTweets()
     }
     
     func follow(){
@@ -49,6 +50,14 @@ class ProfileViewModel: ObservableObject {
         userFollowing.document(user.id).getDocument { snapshot, _ in
             guard let isFollowed = snapshot?.exists else { return }
             self.isFollowed = isFollowed;
+        }
+    }
+    func fetchUsersTweets(){
+        COLLECTION_Tweet.whereField("uid", isEqualTo: user.id).getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else {return}
+            documents.forEach { document in
+                print(document.data())
+            }
         }
     }
 }
