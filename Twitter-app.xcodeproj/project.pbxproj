@@ -53,6 +53,9 @@
 		3B9F40B626E3E76F00A525F9 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B526E3E76F00A525F9 /* UploadTweetViewModel.swift */; };
 		3B9F40B826E3F79800A525F9 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B726E3F79800A525F9 /* TweetModel.swift */; };
 		3B9F40BA26E3F7C900A525F9 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40B926E3F7C900A525F9 /* TweetViewModel.swift */; };
+		3B9F40BC26E4017A00A525F9 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40BB26E4017A00A525F9 /* TweetDetailView.swift */; };
+		3B9F40BE26E401CC00A525F9 /* TweetActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40BD26E401CC00A525F9 /* TweetActionView.swift */; };
+		3B9F40C026E4339D00A525F9 /* TweetActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40BF26E4339D00A525F9 /* TweetActionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		3B9F40B526E3E76F00A525F9 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		3B9F40B726E3F79800A525F9 /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
 		3B9F40B926E3F7C900A525F9 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		3B9F40BB26E4017A00A525F9 /* TweetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailView.swift; sourceTree = "<group>"; };
+		3B9F40BD26E401CC00A525F9 /* TweetActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionView.swift; sourceTree = "<group>"; };
+		3B9F40BF26E4339D00A525F9 /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,12 +179,14 @@
 			path = UserProfileView;
 			sourceTree = "<group>";
 		};
-		3B1952CC26C8A2BE0080563D /* NewTweetView */ = {
+		3B1952CC26C8A2BE0080563D /* TweetView */ = {
 			isa = PBXGroup;
 			children = (
 				3B1952CD26C8A2EA0080563D /* newTweetView.swift */,
+				3B9F40BB26E4017A00A525F9 /* TweetDetailView.swift */,
+				3B9F40BD26E401CC00A525F9 /* TweetActionView.swift */,
 			);
-			path = NewTweetView;
+			path = TweetView;
 			sourceTree = "<group>";
 		};
 		3B1952D126C8B8190080563D /* UserLogin */ = {
@@ -252,7 +260,7 @@
 			children = (
 				3B1952D326C8B82C0080563D /* UserSign-upView */,
 				3B1952D126C8B8190080563D /* UserLogin */,
-				3B1952CC26C8A2BE0080563D /* NewTweetView */,
+				3B1952CC26C8A2BE0080563D /* TweetView */,
 				3B1952B326C6C2C00080563D /* UserProfileView */,
 				3B1952A626C46EF60080563D /* UtilsView */,
 				3B1952A526C46EDF0080563D /* ContactsView */,
@@ -270,6 +278,7 @@
 				3B9F40B326E2F1A900A525F9 /* ProfileViewModel.swift */,
 				3B9F40B526E3E76F00A525F9 /* UploadTweetViewModel.swift */,
 				3B9F40B926E3F7C900A525F9 /* TweetViewModel.swift */,
+				3B9F40BF26E4339D00A525F9 /* TweetActionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -388,10 +397,13 @@
 				3B1952A026C46A5B0080563D /* MessageView.swift in Sources */,
 				3B1952AC26C4816A0080563D /* ChatBubble.swift in Sources */,
 				3B1952DB26C8C0730080563D /* Sign-upView.swift in Sources */,
+				3B9F40C026E4339D00A525F9 /* TweetActionViewModel.swift in Sources */,
 				3B1F27B426C3790800679BCB /* Twitter_appApp.swift in Sources */,
+				3B9F40BC26E4017A00A525F9 /* TweetDetailView.swift in Sources */,
 				3B1952D026C8AEEB0080563D /* customTextArea.swift in Sources */,
 				3B9F40AF26E2E5BB00A525F9 /* SearchViewModel.swift in Sources */,
 				3B1952D526C8B8470080563D /* Log-inView.swift in Sources */,
+				3B9F40BE26E401CC00A525F9 /* TweetActionView.swift in Sources */,
 				3B19529C26C460C70080563D /* SearchBar.swift in Sources */,
 				3B9F40AA26E28A5600A525F9 /* User.swift in Sources */,
 				3B1952C526C8072D0080563D /* UserProfile.swift in Sources */,

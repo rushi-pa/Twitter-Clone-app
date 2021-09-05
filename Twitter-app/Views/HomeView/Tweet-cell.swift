@@ -16,23 +16,22 @@ struct Tweet_cell: View {
                     .resizable()
                     .scaledToFill()
                     .clipped()
-                    .frame(width: 50, height:50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .cornerRadius(50/2)
-                    
+                    .frame(width: 48, height:48)
+                    .cornerRadius(48/2)
+                
                 VStack(alignment: .leading) {
                     HStack {
                         Text(tweet.fullname)
-                            .font(.system(size: 20))
-                            .fontWeight(.bold)
+                            .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.black)
-                            .opacity(0.9)
+                       
                         Text("@\(tweet.username)")
                             .font(.body)
                             .fontWeight(.semibold)
                             .foregroundColor(.gray);
                         Text("•")
                             .foregroundColor(.gray);
-                        Text("tweet.timestamp")
+                        Text("2w")
                             .font(.body)
                             .fontWeight(.semibold)
                             .foregroundColor(.gray);
@@ -41,37 +40,18 @@ struct Tweet_cell: View {
                     
                     
                     Text(tweet.caption)
-                            .font(.system(size: 20))
-                            .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
-                            //.padding(.trailing);
+                        .font(.system(size: 20))
+                        .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.black)
+                    //.padding(.trailing);
                 }
-            }.padding(.leading,10)
+            }.padding(.leading,-70)
             .padding(.trailing,9)
             .padding(.top)
-            HStack{
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image(systemName: "heart")
-                        .frame(width: 42, height: 42, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/);
-                }).padding(.leading);
-                Spacer();
-                Button(action:{} , label: {
-                    Image(systemName: "bubble.left")
-                        .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/);
-                });
-                Spacer();
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image(systemName: "arrow.2.squarepath")
-                        .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/);
-                });
-                Spacer();
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image(systemName: "bookmark")
-                        .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/);
-                }).padding(.trailing)
-            }.foregroundColor(.gray);
             
+            TweetActionView(tweet: tweet)
             Divider();
-        };
+        }
     }
 }
 

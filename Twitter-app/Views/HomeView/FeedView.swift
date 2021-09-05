@@ -16,7 +16,12 @@ struct FeedView: View {
                 VStack{
                     ForEach(tweetViewMode.tweets
                     ) {tweet  in
-                        Tweet_cell(tweet: tweet)
+                        NavigationLink(
+                            destination: TweetDetailView(tweet: tweet),
+                            label: {
+                                Tweet_cell(tweet: tweet)
+                            }).foregroundColor(.clear)
+                       //
                     }
                 }
             }
