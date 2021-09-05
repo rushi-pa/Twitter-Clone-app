@@ -19,15 +19,19 @@ struct UserProfile: View {
     var body: some View {
        
         ScrollView {
-            UserProfileHeader(viewmodel: self.viewmodel, isFollowed: $viewmodel.isFollowed)
+            LazyVStack {
+                UserProfileHeader(viewmodel: self.viewmodel, isFollowed: $viewmodel.isFollowed).padding(.top,10)
+            
         
-       // navigationTitle("Batman")
+       
         FilterButtonView(selectedOption: $filterSelected).padding()
-        ForEach(viewmodel.userTweets){tweet in
+        ForEach(viewmodel.tweet(forFilter: filterSelected)){tweet in
             Tweet_cell(tweet: tweet).padding(.leading)
         }
     }
-    };
+        }
+        //navigationTitle(user.username)
+    }
 }
 
 

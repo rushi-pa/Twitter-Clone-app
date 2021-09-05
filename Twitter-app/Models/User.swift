@@ -14,8 +14,8 @@ struct User: Identifiable {
     let profileImageUrl: String
     let fullname: String
     let email: String
-//    var stats: UserStats
-//    var bio: String?
+    var stats: UserStats
+    var bio: String?
     
     var isFollowed = false
     var isCurrentUser: Bool { return Auth.auth().currentUser?.uid == self.id }
@@ -26,12 +26,12 @@ struct User: Identifiable {
         self.profileImageUrl = dictionary["imageURL"] as? String ?? ""
         self.email = dictionary["Email"] as? String ?? ""
         self.fullname = dictionary["FullName"] as? String ?? ""
-//        self.stats = UserStats(followers: 0, following: 0)
- //       self.bio = dictionary["bio"] as? String ?? ""
+        self.stats = UserStats(followers: 0, following: 0)
+        self.bio = dictionary["bio"] as? String ?? ""
     }
 }
 
-//struct UserStats {
-//    let followers: Int
-//    let following: Int
-//}
+struct UserStats {
+    let followers: Int
+    let following: Int
+}

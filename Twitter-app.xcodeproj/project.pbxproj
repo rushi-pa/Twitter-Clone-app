@@ -56,6 +56,7 @@
 		3B9F40BC26E4017A00A525F9 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40BB26E4017A00A525F9 /* TweetDetailView.swift */; };
 		3B9F40BE26E401CC00A525F9 /* TweetActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40BD26E401CC00A525F9 /* TweetActionView.swift */; };
 		3B9F40C026E4339D00A525F9 /* TweetActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40BF26E4339D00A525F9 /* TweetActionViewModel.swift */; };
+		3B9F40C226E53D0500A525F9 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F40C126E53D0500A525F9 /* LazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		3B9F40BB26E4017A00A525F9 /* TweetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailView.swift; sourceTree = "<group>"; };
 		3B9F40BD26E401CC00A525F9 /* TweetActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionView.swift; sourceTree = "<group>"; };
 		3B9F40BF26E4339D00A525F9 /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
+		3B9F40C126E53D0500A525F9 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				3B1952D626C8B9070080563D /* CustomTextView.swift */,
 				3B1952D826C8B93F0080563D /* PasswordCustomTextArea.swift */,
 				3B1952DC26C990710080563D /* ImagePickerView.swift */,
+				3B9F40C126E53D0500A525F9 /* LazyView.swift */,
 			);
 			path = UtilsView;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9F40C226E53D0500A525F9 /* LazyView.swift in Sources */,
 				3B1952C926C8079D0080563D /* FilterButtonView.swift in Sources */,
 				3B1952C726C8073F0080563D /* UserProfileHeader.swift in Sources */,
 				3B1F27CA26C44FF200679BCB /* SearchView.swift in Sources */,
