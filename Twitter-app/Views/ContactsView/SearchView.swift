@@ -17,10 +17,12 @@ struct SearchView: View {
                 VStack{
                     ForEach(viewmodel.users) { user  in
                         NavigationLink(
-                            destination: UserProfile( user: user),
+                            destination: LazyView(UserProfile( user: user)),
                             label: {
                                 ContactsCell(user: user);
-                            }).foregroundColor(.black)
+                            })
+                            .navigationTitle(user.username)
+                            .foregroundColor(.black)
                     }
                 }
             }

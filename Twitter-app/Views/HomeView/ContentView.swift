@@ -33,7 +33,7 @@ struct ContentView: View {
                             Text("Messages")
                         }
                 }
-                .navigationBarTitle("Home")
+                .navigationBarTitle("Twitterrrr")
                 .navigationBarItems(leading: Button(action: {viewModel.SignOut()}, label: {
                     KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
                         .resizable()
