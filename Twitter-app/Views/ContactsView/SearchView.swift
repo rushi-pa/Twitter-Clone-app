@@ -15,7 +15,7 @@ struct SearchView: View {
             SearchBar(text: $searchText);
             ScrollView{
                 VStack{
-                    ForEach(viewmodel.users) { user  in
+                    ForEach(searchText.isEmpty ? viewmodel.users : viewmodel.filterUser(searchText)) { user  in
                         NavigationLink(
                             destination: LazyView(UserProfile( user: user)),
                             label: {

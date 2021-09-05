@@ -8,8 +8,7 @@
 import SwiftUI
 import Firebase
 class ProfileViewModel: ObservableObject {
-    var user : User
-    @Published var isFollowed = false
+    @Published var user : User
     @Published var userTweets = [Tweet]()
     @Published var userLikes = [Tweet]()
     init(user : User) {
@@ -17,6 +16,7 @@ class ProfileViewModel: ObservableObject {
         checkIfUserIsFollowing()
         fetchUsersTweets()
         userLikedTweets()
+        fetchUserStats()
     }
     
 }
@@ -29,7 +29,7 @@ extension ProfileViewModel{    func follow(){
     }
     COLLECTION_Following.document(currentUid).collection("user-following").document(user.id).setData([:]) { _ in
         COLLECTION_Followers.document(self.user.id).collection("user-followers").document(currentUid).setData([:]) { _ in
-            self.isFollowed = true;
+            self.user.isFollowed = true;
         }
     }
 }
@@ -43,7 +43,7 @@ func unfollow(){
     
     userFollowing.document(user.id).delete { _ in
         userFollowers.document(currentUid).delete { _ in
-            self.isFollowed = false;
+            self.user.isFollowed = false;
         }
     }
 }
@@ -52,10 +52,11 @@ func checkIfUserIsFollowing(){
     guard let currentUid = Auth.auth().currentUser?.uid else {
         return
     }
+    guard !user.isCurrentUser else {return}
     let userFollowing = COLLECTION_Following.document(currentUid).collection("user-following")
     userFollowing.document(user.id).getDocument { snapshot, _ in
         guard let isFollowed = snapshot?.exists else { return }
-        self.isFollowed = isFollowed;
+        self.user.isFollowed = isFollowed;
     }
 }
 func fetchUsersTweets(){
@@ -82,7 +83,6 @@ func userLikedTweets(){
 }
 func tweet(forFilter filter : TweetFilterOptions) -> [Tweet]{
     switch filter{
-    
     case .tweets:
         return userTweets
     case .replies:
@@ -92,16 +92,16 @@ func tweet(forFilter filter : TweetFilterOptions) -> [Tweet]{
     }
 }
 func fetchUserStats(){
-   let followRef = COLLECTION_Followers.document(user.id).collection("user-followers")
-   let followingRef = COLLECTION_Followers.document(user.id).collection("user-following")
+    let followRef = COLLECTION_Followers.document(user.id).collection("user-followers")
+    let followingRef = COLLECTION_Following.document(user.id).collection("user-following")
     followRef.getDocuments { snapshot, _ in
         guard let followersCount = snapshot?.documents.count else {return}
         followingRef.getDocuments { snapshot, _ in
             guard let followingCount = snapshot?.documents.count else {return}
             self.user.stats = UserStats(followers: followersCount, following: followingCount);
-            
+            print(self.user.stats);
+            print(snapshot)
         }
     }
-   
 }
 }

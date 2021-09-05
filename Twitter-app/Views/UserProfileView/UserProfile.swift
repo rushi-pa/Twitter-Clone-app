@@ -20,7 +20,7 @@ struct UserProfile: View {
        
         ScrollView {
             LazyVStack {
-                UserProfileHeader(viewmodel: self.viewmodel, isFollowed: $viewmodel.isFollowed).padding(.top,10)
+                UserProfileHeader(viewmodel: self.viewmodel, isFollowed: $viewmodel.user.isFollowed).padding(.top,10)
             
         
        
