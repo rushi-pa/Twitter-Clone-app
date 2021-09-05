@@ -18,10 +18,16 @@ struct UserProfile: View {
     }
     var body: some View {
        
-        UserProfileHeader(viewmodel: self.viewmodel, isFollowed: $viewmodel.isFollowed);
+        ScrollView {
+            UserProfileHeader(viewmodel: self.viewmodel, isFollowed: $viewmodel.isFollowed)
+        
        // navigationTitle("Batman")
         FilterButtonView(selectedOption: $filterSelected).padding()
+        ForEach(viewmodel.userTweets){tweet in
+            Tweet_cell(tweet: tweet).padding(.leading)
+        }
     }
+    };
 }
 
 

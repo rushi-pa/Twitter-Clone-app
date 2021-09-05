@@ -10,11 +10,13 @@ import Firebase
 class ProfileViewModel: ObservableObject {
     let user : User
     @Published var isFollowed = false
-    
+    @Published var userTweets = [Tweet]()
+    @Published var userLikes = [Tweet]()
     init(user : User) {
         self.user = user
         checkIfUserIsFollowing()
         fetchUsersTweets()
+        userLikedTweets()
     }
     
     func follow(){
@@ -55,8 +57,22 @@ class ProfileViewModel: ObservableObject {
     func fetchUsersTweets(){
         COLLECTION_Tweet.whereField("uid", isEqualTo: user.id).getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else {return}
-            documents.forEach { document in
-                print(document.data())
+            self.userTweets = documents.map({Tweet(dictionary: $0.data())})
+        }
+    }
+    func userLikedTweets(){
+        var tweets = [Tweet]()
+        COLLECTION_USERS.document(user.id).collection("user-likes").getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else {return}
+            let Tweetids = documents.map({$0.documentID});
+            Tweetids.forEach { id in
+                COLLECTION_Tweet.document(id).getDocument { snapshot, _ in
+                    guard let data = snapshot?.data() else {return}
+                    let tweet = Tweet(dictionary: data);
+                    tweets.append(tweet)
+                    guard tweets.count == Tweetids.count else {return}
+                    self.userLikes = tweets
+                }
             }
         }
     }
