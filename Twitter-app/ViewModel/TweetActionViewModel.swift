@@ -41,9 +41,9 @@ class TweetActionViewModel:ObservableObject {
             return
         }
         COLLECTION_USERS.document(currentUid).collection("user-likes").document(tweet.id).getDocument { snapshot, _ in
-           guard let didLike = snapshot?.exists else {return}
+            guard let didLike = snapshot?.exists else {return}
             self.didLike = didLike;
         }
     }
-   
+    
 }

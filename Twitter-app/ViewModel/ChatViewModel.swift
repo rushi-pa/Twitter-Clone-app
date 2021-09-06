@@ -40,6 +40,7 @@ class ChatViewModel : ObservableObject{
             }
         }
     }
+    
     func sendMessage(_ messageText : String) {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let cureentUserRef = COLLECTION_MESSAGES.document(uid).collection(user.id).document()
@@ -52,5 +53,6 @@ class ChatViewModel : ObservableObject{
         recivingUserRef.document(messageId).setData(data);
         reciveingRecentRef.document(uid).setData(data);
         currentRecentRef.document(user.id).setData(data)
+        
     }
 }
