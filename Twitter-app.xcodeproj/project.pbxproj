@@ -231,12 +231,12 @@
 		3B1F27B226C3790800679BCB /* Twitter-app */ = {
 			isa = PBXGroup;
 			children = (
+				3BA6876B26E675FF002CF86F /* ProjectFiles */,
 				3B9F40B026E2E67C00A525F9 /* Utils */,
 				3B7D864926CDF2EF00D7D10A /* ViewModel */,
 				3B1952DE26C994F70080563D /* GoogleService-Info.plist */,
 				3B1F27C326C3860A00679BCB /* Views */,
 				3B1F27C226C3860200679BCB /* Models */,
-				3B1F27B326C3790800679BCB /* Twitter_appApp.swift */,
 				3B1F27B726C3790900679BCB /* Assets.xcassets */,
 				3B1F27BC26C3790900679BCB /* Info.plist */,
 				3B1F27B926C3790900679BCB /* Preview Content */,
@@ -298,6 +298,14 @@
 				3B9F40B126E2E68F00A525F9 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3BA6876B26E675FF002CF86F /* ProjectFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F27B326C3790800679BCB /* Twitter_appApp.swift */,
+			);
+			path = ProjectFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

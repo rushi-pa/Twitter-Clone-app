@@ -26,7 +26,6 @@ class UploadTweetViewModel: ObservableObject {
                                          "Likes" : 0,  ]
             docRef.setData(data)
             self.isPresented = false
-            
         }
     }
 }

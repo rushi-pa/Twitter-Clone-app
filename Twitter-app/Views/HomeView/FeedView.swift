@@ -21,13 +21,11 @@ struct FeedView: View {
                             label: {
                                 Tweet_cell(tweet: tweet)
                             }).foregroundColor(.clear)
-                       //
                     }
                 }
             }
             Button(action: {
-                //viewModel.SignOut()
-                    isnewTweetView.toggle()
+                isnewTweetView.toggle()
             }, label: {
                 Image(systemName: "plus")
                     .resizable()
@@ -42,7 +40,9 @@ struct FeedView: View {
             .fullScreenCover(isPresented: $isnewTweetView){
                 newTweetView(isPresented: $isnewTweetView)
             }
+            .onDisappear(perform: self.tweetViewMode.fetchTweets)
         }
+        .onAppear(perform: self.tweetViewMode.fetchTweets)
     }
 }
 

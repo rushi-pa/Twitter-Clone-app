@@ -10,11 +10,13 @@ import Kingfisher
 struct newTweetView: View {
     @Binding var isPresented : Bool
     @ObservedObject var viewmodel : UploadTweetViewModel
+    @ObservedObject var viewmode : TweetViewModel
     @State var tweetInput : String = ""
   //  var tweet: Tweet?
     init(isPresented : Binding<Bool>) {
         self._isPresented = isPresented
         self.viewmodel = UploadTweetViewModel(isPresented: isPresented)
+        self.viewmode = TweetViewModel()
     }
     var body: some View {
         VStack {
@@ -64,11 +66,6 @@ struct newTweetView: View {
             }.padding()
             Spacer()
         }
-    }
-}
-
-struct newTweetView_Previews: PreviewProvider {
-    static var previews: some View {
-        newTweetView(isPresented: .constant(false))
+        .onDisappear(perform: self.viewmode.fetchTweets)
     }
 }
