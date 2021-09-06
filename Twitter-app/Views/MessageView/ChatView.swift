@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ChatView: View {
     @State var messageText : String = ""
+    let user : User
+    let viewmodel : ChatViewModel
+    init(user : User) {
+        self.user = user
+        self.viewmodel = ChatViewModel(user: user)
+    }
     var body: some View {
         VStack{
             ScrollView{
@@ -18,17 +24,11 @@ struct ChatView: View {
                         }
                     }
             }.padding(.top)
-            }
+        }.navigationTitle(user.username)
             Divider();
-            MessageTextView(messageText: $messageText)
+        MessageTextView(messageText: $messageText, viewmodel: viewmodel)
                 .padding(.bottom,2)
         }
     }
 
-
-struct ChatView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
-    }
-}
 
