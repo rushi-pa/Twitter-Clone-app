@@ -23,10 +23,14 @@ struct MessageTextView: View {
                 .textFieldStyle(PlainTextFieldStyle())
                 .frame(minHeight:50);
             
-            Button(action: {viewmodel.sendMessage(messageText)}, label: {
+            Button(action: {sendMessage()}, label: {
                 Text("Send")
             })
         }.padding(.horizontal,9)
+    }
+    func sendMessage() {
+        viewmodel.sendMessage(messageText)
+        messageText = ""
     }
 }
 

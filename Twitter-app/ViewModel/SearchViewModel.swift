@@ -25,13 +25,13 @@ class SearchViewModel: ObservableObject {
             switch config{
             case .message:  self.users = users.filter({!$0.isCurrentUser})
             case .search :  self.users = documents.map({ User(dictionary: $0.data()) })
-
-            
+                
+                
             }
-//            documents.forEach { document in
-//                let user = User(dictionary: document.data())
-//                self.$users.append(user);
-//            }
+            //            documents.forEach { document in
+            //                let user = User(dictionary: document.data())
+            //                self.$users.append(user);
+            //            }
         }
     }
     func filterUser(_ query : String) -> [User]{

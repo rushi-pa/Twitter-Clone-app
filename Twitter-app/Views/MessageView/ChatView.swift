@@ -21,14 +21,14 @@ struct ChatView: View {
                 VStack(alignment: .leading, spacing: 12){
                     ForEach(viewmodel.messages) {message  in
                         ExtractedView(message: message)
-                        }
                     }
+                }
             }.padding(.top)
         }.navigationTitle(user.username)
-            Divider();
+        Divider();
         MessageTextView(messageText: $messageText, viewmodel: viewmodel)
-                .padding(.bottom,2)
-        }
+            .padding(.bottom,2)
     }
+}
 
 
