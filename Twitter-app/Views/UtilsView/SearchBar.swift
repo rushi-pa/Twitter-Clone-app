@@ -28,12 +28,4 @@ struct SearchBar: View {
                 
         }.padding(.horizontal,20).padding(.vertical,10)
     }
-
     }
-
-
-struct SearchBar_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBar(text: .constant("Search"))
-    }
-}

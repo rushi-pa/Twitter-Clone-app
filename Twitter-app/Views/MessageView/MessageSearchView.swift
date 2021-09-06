@@ -19,7 +19,7 @@ struct MessageSearchView: View {
         SearchBar(text: $searchText);
         ScrollView{
             VStack{
-                ForEach(viewmodel.users) { user  in
+                ForEach(searchText.isEmpty ? viewmodel.users : viewmodel.filterUser(searchText)) { user  in
                     Button(action: {self.show.toggle()
                             self.StartnewChat.toggle()
                         self.user = user
