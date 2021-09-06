@@ -18,6 +18,9 @@ struct ExtractedView: View {
                     .padding()
                     .background(Color.blue)
                     .clipShape(ChatBubble(isFromCurrentUser: true))
+                    .padding(.leading, 100)
+                    .padding(.trailing, 16)
+
             }else{
                 HStack{
                     KFImage(URL(string: message.user.profileImageUrl))

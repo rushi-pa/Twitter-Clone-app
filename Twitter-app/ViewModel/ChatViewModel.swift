@@ -19,7 +19,6 @@ class ChatViewModel : ObservableObject{
         guard let uid =  AuthViewModel.shared.userSession?.uid else {return}
         
         let query = COLLECTION_MESSAGES.document(uid).collection(user.id)
-        query.order(by: "timestamp", descending: true)
         query.addSnapshotListener { snapshot, _ in
             guard let changes = snapshot?.documentChanges.filter({$0.type == .added}) else {return}
             
@@ -34,7 +33,7 @@ class ChatViewModel : ObservableObject{
                     guard let data = snapshot?.data() else { return }
                     let user = User(dictionary: data)
                     self.messages.append(Message(user: user, dictionary: messageData))
-                    
+                    self.messages.sort(by: { $0.timestamp.dateValue() < $1.timestamp.dateValue()})
                     print(self.messages)
                 }
             }

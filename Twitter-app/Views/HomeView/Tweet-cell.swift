@@ -29,7 +29,7 @@ struct Tweet_cell: View {
                         Text("@\(tweet.username) •")
                             .foregroundColor(.gray)
                         
-                        Text("2w")
+                        Text("\(tweet.timestampString(timeStamp: tweet.timestamp))")
                             .foregroundColor(.gray)
                     }
                     
