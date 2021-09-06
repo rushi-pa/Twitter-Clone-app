@@ -16,7 +16,7 @@ struct MessageView: View {
         ZStack (alignment: .bottomTrailing){
             if let user = user {
             NavigationLink(
-                destination: ChatView(user: user),
+                destination: LazyView(ChatView(user: user)),
                 isActive: $showChat,
                 label: {})
                 
@@ -26,7 +26,7 @@ struct MessageView: View {
                     VStack{
                         ForEach(viewmodel.recentMessage) {message  in
                             NavigationLink(
-                                destination: ChatView(user: message.user),
+                                destination: LazyView(ChatView(user: message.user)),
                                 label: {
                                     MessageCell(message: message).foregroundColor(.black);
                                 })
@@ -52,8 +52,3 @@ struct MessageView: View {
     }
 }
 
-struct MessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageView()
-    }
-}

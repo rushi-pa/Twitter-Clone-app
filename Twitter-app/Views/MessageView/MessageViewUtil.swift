@@ -6,27 +6,26 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct ExtractedView: View {
-    let message : MockMessage
+    let message : Message
+    
     var body: some View {
         HStack {
-            if message.isCurrentUser {
+            if message.isFromCurrentUser {
                 Spacer();
-                Text(message.messageText)
+                Text(message.text)
                     .padding()
                     .background(Color.blue)
                     .clipShape(ChatBubble(isFromCurrentUser: true))
-                
-                
             }else{
                 HStack{
-                    Image(message.imageName)
+                    KFImage(URL(string: message.user.profileImageUrl))
                         .resizable()
                         .scaledToFill()
                         .frame(width: 40 , height : 40)
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/);
-                    Text(message.messageText).padding()
+                    Text(message.text).padding()
                         .background(Color.yellow)
                         .clipShape(ChatBubble(isFromCurrentUser: false))
                     
@@ -36,4 +35,3 @@ struct ExtractedView: View {
         }.padding(7)
     }
 }
-
