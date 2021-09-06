@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MessageTextView: View {
     @Binding var messageText :String
+    let  viewmodel : ChatViewModel
+    
     var body: some View {
         HStack{
             TextField("message",text:$messageText)
@@ -21,15 +23,10 @@ struct MessageTextView: View {
                 .textFieldStyle(PlainTextFieldStyle())
                 .frame(minHeight:50);
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {viewmodel.sendMessage(messageText)}, label: {
                 Text("Send")
             })
         }.padding(.horizontal,9)
     }
 }
 
-struct MessageTextView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageTextView(messageText: .constant("Message..."))
-    }
-}

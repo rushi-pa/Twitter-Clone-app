@@ -99,8 +99,7 @@ func fetchUserStats(){
         followingRef.getDocuments { snapshot, _ in
             guard let followingCount = snapshot?.documents.count else {return}
             self.user.stats = UserStats(followers: followersCount, following: followingCount);
-            print(self.user.stats);
-            print(snapshot)
+
         }
     }
 }
