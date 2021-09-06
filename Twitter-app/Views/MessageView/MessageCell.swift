@@ -6,25 +6,27 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct MessageCell: View {
+    
+    let message: Message
     var body: some View {
         VStack {
             HStack{
-                Image("batman")
+                KFImage(URL(string: message.user.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 38, height: 38, alignment: .leading)
                     .cornerRadius(19)
                     
                 VStack(alignment: .leading) {
-                    Text("Contact Name")
+                    Text(message.user.fullname)
                         .font(.system(size: 19))
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .opacity(0.7)
                         .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                         
-                    Text("Suppose this is a very long message and you don't want it to show it. all over the place so remove it")
+                    Text(message.text)
                         .foregroundColor(.gray)
                         .font(.system(size: 14))
                         .fontWeight(.semibold)
@@ -39,11 +41,5 @@ struct MessageCell: View {
             Divider();
         }
         
-    }
-}
-
-struct MessageCell_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageCell()
     }
 }

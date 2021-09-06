@@ -12,7 +12,8 @@ struct MessageSearchView: View {
     @State var searchText = "";
     @Binding var show : Bool
     @Binding var StartnewChat : Bool
-    @ObservedObject var viewmodel = SearchViewModel()
+    @Binding var user : User?
+    @ObservedObject var viewmodel = SearchViewModel(config: .message)
     var body: some View {
         VStack{
         SearchBar(text: $searchText);
@@ -20,18 +21,14 @@ struct MessageSearchView: View {
             VStack{
                 ForEach(viewmodel.users) { user  in
                     Button(action: {self.show.toggle()
-                            self.StartnewChat.toggle()}, label: {
+                            self.StartnewChat.toggle()
+                        self.user = user
+                    }, label: {
                                 ContactsCell(user: user)
                             }).foregroundColor(.black )
                 }
             }
         }
     }
-    }
-}
-
-struct MessageSearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageSearchView(show: .constant(true), StartnewChat: .constant(true))
     }
 }
