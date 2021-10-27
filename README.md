@@ -8,14 +8,14 @@ Swift UI | MVVM | Firebase | Cocoa Pods | Data Parser SDK | Fire store API | Swi
 
 App Images in the link below:
 </p></p>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/1.png?raw=true"></code>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/2.png?raw=true"></code>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/3.png?raw=true"></code>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/4.png?raw=true"></code>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/5.png?raw=true"></code></p>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/6.png?raw=true"></code>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/7.png?raw=true"></code>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/8.png?raw=true"></code>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/1.png?raw=true"></code></t>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/2.png?raw=true"></code></t>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/3.png?raw=true"></code></t>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/4.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/5.png?raw=true"></code></t>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/6.png?raw=true"></code></t>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/7.png?raw=true"></code></t>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/8.png?raw=true"></code></p>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/9.png?raw=true"></code>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/10.png?raw=true"></code></p>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/11.png?raw=true"></code></p>
