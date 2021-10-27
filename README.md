@@ -20,8 +20,8 @@ App Images in the link below:
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/10.png?raw=true"></code></t></t></t></t>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/11.png?raw=true"></code></t></t></t></t>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/12.png?raw=true"></code></t></t></t></t>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/13.png?raw=true"></code></t></t></t></t>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/14.png?raw=true"></code></t></t></t></t>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/15.png?raw=true"></code></t></t></t></t>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/16.png?raw=true"></code></t></t></t></t>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/13.png?raw=true"></code></t></t></t></t></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/14.png?raw=true"></code></t></t></t></t></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/15.png?raw=true"></code></t></t></t></t></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/16.png?raw=true"></code></t></t></t></t></p>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/17.png?raw=true"></code></t></t></t></t>
