@@ -7,4 +7,4 @@ Swift UI | MVVM | Firebase | Cocoa Pods | Data Parser SDK | Fire store API | Swi
 (** Click the logo to see more about this project **)
 
 App Images in the link below:
-![alt text](https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec.1.jpg?raw=true)
+![alt text](https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec.1.png?raw=true)
