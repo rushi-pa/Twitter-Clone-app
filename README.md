@@ -7,4 +7,21 @@ Swift UI | MVVM | Firebase | Cocoa Pods | Data Parser SDK | Fire store API | Swi
 (** Click the logo to see more about this project **)
 
 App Images in the link below:
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/1.png?raw=true"></code>
+</p></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/1.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/2.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/3.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/4.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/5.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/6.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/7.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/8.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/9.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/10.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/11.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/12.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/13.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/14.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/15.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/16.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/17.png?raw=true"></code></p>
