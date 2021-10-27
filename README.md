@@ -8,9 +8,9 @@ Swift UI | MVVM | Firebase | Cocoa Pods | Data Parser SDK | Fire store API | Swi
 
 App Images in the link below:
 </p></p>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/1.png?raw=true"></code></p>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/2.png?raw=true"></code></p>
-<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/3.png?raw=true"></code></p>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/1.png?raw=true"></code>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/2.png?raw=true"></code>
+<code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/3.png?raw=true"></code>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/4.png?raw=true"></code></p>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/5.png?raw=true"></code></p>
 <code><img height="500" src="https://github.com/rushi-pa/Twitter-Clone-app/blob/main/PhotosDirec/6.png?raw=true"></code></p>
